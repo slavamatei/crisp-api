@@ -1,0 +1,1798 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2023-10-15T22:40:09.597Z",
+        "line": 4,
+        "name": "Get All Patients",
+        "description": "",
+        "id": "validate-query-api-endpoint-filtering-patients-data;get-all-patients",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2893233000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I make a GET request to query endpoint",
+            "match": {
+              "location": "crisp.step_definitions.GetQueryStepDef.iMakeAGETRequestToQueryEndpoint()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 47005000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I get response with status code 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 32
+                }
+              ],
+              "location": "crisp.step_definitions.GetQueryStepDef.iGetResponseWithStatusCode(int)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1003080600,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I should see a list of patients",
+            "match": {
+              "location": "crisp.step_definitions.GetQueryStepDef.i_should_see_a_list_of_patients()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@queryEndpoint"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-10-15T22:40:13.583Z",
+        "line": 15,
+        "name": "Filter Patients By Id",
+        "description": "",
+        "id": "validate-query-api-endpoint-filtering-patients-data;filter-patients-by-id;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 412032700,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "I make a GET request with \"111\" query parameter",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"111\"",
+                  "offset": 26
+                }
+              ],
+              "location": "crisp.step_definitions.GetQueryStepDef.iMakeAGETRequestWithQueryParameter(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1998500,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "I get response with status code 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 32
+                }
+              ],
+              "location": "crisp.step_definitions.GetQueryStepDef.iGetResponseWithStatusCode(int)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 121011400,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "I should get only one patient in response body matching given \"111\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"111\"",
+                  "offset": 62
+                }
+              ],
+              "location": "crisp.step_definitions.GetQueryStepDef.iShouldGetOnlyOnePatientInResponseBodyMatchingGiven(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@queryEndpoint"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-10-15T22:40:14.143Z",
+        "line": 16,
+        "name": "Filter Patients By Id",
+        "description": "",
+        "id": "validate-query-api-endpoint-filtering-patients-data;filter-patients-by-id;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 367030500,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "I make a GET request with \"222\" query parameter",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"222\"",
+                  "offset": 26
+                }
+              ],
+              "location": "crisp.step_definitions.GetQueryStepDef.iMakeAGETRequestWithQueryParameter(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 999200,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "I get response with status code 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 32
+                }
+              ],
+              "location": "crisp.step_definitions.GetQueryStepDef.iGetResponseWithStatusCode(int)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 38002500,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "I should get only one patient in response body matching given \"222\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"222\"",
+                  "offset": 62
+                }
+              ],
+              "location": "crisp.step_definitions.GetQueryStepDef.iShouldGetOnlyOnePatientInResponseBodyMatchingGiven(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@queryEndpoint"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-10-15T22:40:14.566Z",
+        "line": 17,
+        "name": "Filter Patients By Id",
+        "description": "",
+        "id": "validate-query-api-endpoint-filtering-patients-data;filter-patients-by-id;;4",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 365027700,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "I make a GET request with \"333\" query parameter",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"333\"",
+                  "offset": 26
+                }
+              ],
+              "location": "crisp.step_definitions.GetQueryStepDef.iMakeAGETRequestWithQueryParameter(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "I get response with status code 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 32
+                }
+              ],
+              "location": "crisp.step_definitions.GetQueryStepDef.iGetResponseWithStatusCode(int)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 37006700,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "I should get only one patient in response body matching given \"333\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"333\"",
+                  "offset": 62
+                }
+              ],
+              "location": "crisp.step_definitions.GetQueryStepDef.iShouldGetOnlyOnePatientInResponseBodyMatchingGiven(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@queryEndpoint"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-10-15T22:40:14.976Z",
+        "line": 18,
+        "name": "Filter Patients By Id",
+        "description": "",
+        "id": "validate-query-api-endpoint-filtering-patients-data;filter-patients-by-id;;5",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 378028500,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "I make a GET request with \"444\" query parameter",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"444\"",
+                  "offset": 26
+                }
+              ],
+              "location": "crisp.step_definitions.GetQueryStepDef.iMakeAGETRequestWithQueryParameter(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1000300,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "I get response with status code 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 32
+                }
+              ],
+              "location": "crisp.step_definitions.GetQueryStepDef.iGetResponseWithStatusCode(int)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 44003900,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "I should get only one patient in response body matching given \"444\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"444\"",
+                  "offset": 62
+                }
+              ],
+              "location": "crisp.step_definitions.GetQueryStepDef.iShouldGetOnlyOnePatientInResponseBodyMatchingGiven(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@queryEndpoint"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-10-15T22:40:15.412Z",
+        "line": 27,
+        "name": "Filter Patients By Date Of Birth",
+        "description": "",
+        "id": "validate-query-api-endpoint-filtering-patients-data;filter-patients-by-date-of-birth;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 374029500,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "I make a GET request with \"1934-06-01\" query param",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"1934-06-01\"",
+                  "offset": 26
+                }
+              ],
+              "location": "crisp.step_definitions.GetQueryStepDef.iMakeAGETRequestWithQueryParam(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1000500,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "I get response with status code 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 32
+                }
+              ],
+              "location": "crisp.step_definitions.GetQueryStepDef.iGetResponseWithStatusCode(int)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 23002600,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "I should get only patients matching \"1934-06-01\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"1934-06-01\"",
+                  "offset": 36
+                }
+              ],
+              "location": "crisp.step_definitions.GetQueryStepDef.iShouldGetOnlyPatientsMatching(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@queryEndpoint"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-10-15T22:40:15.824Z",
+        "line": 28,
+        "name": "Filter Patients By Date Of Birth",
+        "description": "",
+        "id": "validate-query-api-endpoint-filtering-patients-data;filter-patients-by-date-of-birth;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 373029900,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "I make a GET request with \"1956-05-01\" query param",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"1956-05-01\"",
+                  "offset": 26
+                }
+              ],
+              "location": "crisp.step_definitions.GetQueryStepDef.iMakeAGETRequestWithQueryParam(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1000500,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "I get response with status code 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 32
+                }
+              ],
+              "location": "crisp.step_definitions.GetQueryStepDef.iGetResponseWithStatusCode(int)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 23002600,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "I should get only patients matching \"1956-05-01\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"1956-05-01\"",
+                  "offset": 36
+                }
+              ],
+              "location": "crisp.step_definitions.GetQueryStepDef.iShouldGetOnlyPatientsMatching(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@queryEndpoint"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-10-15T22:40:16.230Z",
+        "line": 29,
+        "name": "Filter Patients By Date Of Birth",
+        "description": "",
+        "id": "validate-query-api-endpoint-filtering-patients-data;filter-patients-by-date-of-birth;;4",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 377028800,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "I make a GET request with \"1966-04-01\" query param",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"1966-04-01\"",
+                  "offset": 26
+                }
+              ],
+              "location": "crisp.step_definitions.GetQueryStepDef.iMakeAGETRequestWithQueryParam(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1002100,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "I get response with status code 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 32
+                }
+              ],
+              "location": "crisp.step_definitions.GetQueryStepDef.iGetResponseWithStatusCode(int)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 19999500,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "I should get only patients matching \"1966-04-01\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"1966-04-01\"",
+                  "offset": 36
+                }
+              ],
+              "location": "crisp.step_definitions.GetQueryStepDef.iShouldGetOnlyPatientsMatching(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@queryEndpoint"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-10-15T22:40:16.637Z",
+        "line": 30,
+        "name": "Filter Patients By Date Of Birth",
+        "description": "",
+        "id": "validate-query-api-endpoint-filtering-patients-data;filter-patients-by-date-of-birth;;5",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 351028600,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "I make a GET request with \"2000-03-01\" query param",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"2000-03-01\"",
+                  "offset": 26
+                }
+              ],
+              "location": "crisp.step_definitions.GetQueryStepDef.iMakeAGETRequestWithQueryParam(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1001100,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "I get response with status code 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 32
+                }
+              ],
+              "location": "crisp.step_definitions.GetQueryStepDef.iGetResponseWithStatusCode(int)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "error_message": "java.lang.AssertionError: 1 expectation failed.\nJSON path [0].DateOfBirth doesn\u0027t match.\nExpected: is \"2000-03-01\"\n  Actual: null\n\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)\r\n\tat org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:72)\r\n\tat org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:59)\r\n\tat org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)\r\n\tat org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:59)\r\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)\r\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)\r\n\tat io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:493)\r\n\tat io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)\r\n\tat io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:674)\r\n\tat jdk.internal.reflect.GeneratedMethodAccessor132.invoke(Unknown Source)\r\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:566)\r\n\tat org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:193)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:61)\r\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)\r\n\tat io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:261)\r\n\tat io.restassured.specification.ResponseSpecification$body$1.callCurrent(Unknown Source)\r\n\tat io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:108)\r\n\tat io.restassured.internal.ValidatableResponseOptionsImpl.body(ValidatableResponseOptionsImpl.java:244)\r\n\tat io.restassured.internal.ValidatableResponseImpl.super$2$body(ValidatableResponseImpl.groovy)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\r\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:566)\r\n\tat org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)\r\n\tat groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1268)\r\n\tat org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)\r\n\tat io.restassured.internal.ValidatableResponseImpl.body(ValidatableResponseImpl.groovy:298)\r\n\tat io.restassured.internal.ValidatableResponseImpl.body(ValidatableResponseImpl.groovy)\r\n\tat crisp.step_definitions.GetQueryStepDef.iShouldGetOnlyPatientsMatching(GetQueryStepDef.java:63)\r\n\tat ✽.I should get only patients matching \"2000-03-01\"(file:///C:/Users/14436/IdeaProjects/Crisp/src/test/resources/features/GetQuery.feature:24)\r\n",
+              "duration": 53006000,
+              "status": "failed"
+            },
+            "line": 24,
+            "name": "I should get only patients matching \"2000-03-01\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"2000-03-01\"",
+                  "offset": 36
+                }
+              ],
+              "location": "crisp.step_definitions.GetQueryStepDef.iShouldGetOnlyPatientsMatching(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@queryEndpoint"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-10-15T22:40:17.069Z",
+        "line": 39,
+        "name": "Filter Patients By Address",
+        "description": "",
+        "id": "validate-query-api-endpoint-filtering-patients-data;filter-patients-by-address;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 361027800,
+              "status": "passed"
+            },
+            "line": 34,
+            "name": "I make a GET request with \"CA\" query params",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"CA\"",
+                  "offset": 26
+                }
+              ],
+              "location": "crisp.step_definitions.GetQueryStepDef.iMakeAGETRequestWithQueryParams(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 999500,
+              "status": "passed"
+            },
+            "line": 35,
+            "name": "I get response with status code 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 32
+                }
+              ],
+              "location": "crisp.step_definitions.GetQueryStepDef.iGetResponseWithStatusCode(int)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 21002500,
+              "status": "passed"
+            },
+            "line": 36,
+            "name": "I should get only patients matching given \"CA\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"CA\"",
+                  "offset": 42
+                }
+              ],
+              "location": "crisp.step_definitions.GetQueryStepDef.iShouldGetOnlyPatientsMatchingGiven(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@queryEndpoint"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-10-15T22:40:17.460Z",
+        "line": 40,
+        "name": "Filter Patients By Address",
+        "description": "",
+        "id": "validate-query-api-endpoint-filtering-patients-data;filter-patients-by-address;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 349025900,
+              "status": "passed"
+            },
+            "line": 34,
+            "name": "I make a GET request with \"MD\" query params",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"MD\"",
+                  "offset": 26
+                }
+              ],
+              "location": "crisp.step_definitions.GetQueryStepDef.iMakeAGETRequestWithQueryParams(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 999900,
+              "status": "passed"
+            },
+            "line": 35,
+            "name": "I get response with status code 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 32
+                }
+              ],
+              "location": "crisp.step_definitions.GetQueryStepDef.iGetResponseWithStatusCode(int)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 17001200,
+              "status": "passed"
+            },
+            "line": 36,
+            "name": "I should get only patients matching given \"MD\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"MD\"",
+                  "offset": 42
+                }
+              ],
+              "location": "crisp.step_definitions.GetQueryStepDef.iShouldGetOnlyPatientsMatchingGiven(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@queryEndpoint"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-10-15T22:40:17.835Z",
+        "line": 41,
+        "name": "Filter Patients By Address",
+        "description": "",
+        "id": "validate-query-api-endpoint-filtering-patients-data;filter-patients-by-address;;4",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 351030100,
+              "status": "passed"
+            },
+            "line": 34,
+            "name": "I make a GET request with \"CA State\" query params",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"CA State\"",
+                  "offset": 26
+                }
+              ],
+              "location": "crisp.step_definitions.GetQueryStepDef.iMakeAGETRequestWithQueryParams(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 35,
+            "name": "I get response with status code 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 32
+                }
+              ],
+              "location": "crisp.step_definitions.GetQueryStepDef.iGetResponseWithStatusCode(int)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "error_message": "java.lang.AssertionError: 1 expectation failed.\nJSON path [0].Address doesn\u0027t match.\nExpected: is \"CA State\"\n  Actual: null\n\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)\r\n\tat org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:72)\r\n\tat org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:59)\r\n\tat org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)\r\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)\r\n\tat io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:493)\r\n\tat io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)\r\n\tat io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:674)\r\n\tat jdk.internal.reflect.GeneratedMethodAccessor132.invoke(Unknown Source)\r\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:566)\r\n\tat org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:193)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:61)\r\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)\r\n\tat io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:261)\r\n\tat io.restassured.specification.ResponseSpecification$body$1.callCurrent(Unknown Source)\r\n\tat io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:108)\r\n\tat io.restassured.internal.ValidatableResponseOptionsImpl.body(ValidatableResponseOptionsImpl.java:244)\r\n\tat io.restassured.internal.ValidatableResponseImpl.super$2$body(ValidatableResponseImpl.groovy)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\r\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:566)\r\n\tat org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)\r\n\tat groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1268)\r\n\tat org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)\r\n\tat io.restassured.internal.ValidatableResponseImpl.body(ValidatableResponseImpl.groovy:298)\r\n\tat io.restassured.internal.ValidatableResponseImpl.body(ValidatableResponseImpl.groovy)\r\n\tat crisp.step_definitions.GetQueryStepDef.iShouldGetOnlyPatientsMatchingGiven(GetQueryStepDef.java:76)\r\n\tat ✽.I should get only patients matching given \"CA State\"(file:///C:/Users/14436/IdeaProjects/Crisp/src/test/resources/features/GetQuery.feature:36)\r\n",
+              "duration": 29003500,
+              "status": "failed"
+            },
+            "line": 36,
+            "name": "I should get only patients matching given \"CA State\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"CA State\"",
+                  "offset": 42
+                }
+              ],
+              "location": "crisp.step_definitions.GetQueryStepDef.iShouldGetOnlyPatientsMatchingGiven(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@queryEndpoint"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-10-15T22:40:18.232Z",
+        "line": 42,
+        "name": "Filter Patients By Address",
+        "description": "",
+        "id": "validate-query-api-endpoint-filtering-patients-data;filter-patients-by-address;;5",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 371028700,
+              "status": "passed"
+            },
+            "line": 34,
+            "name": "I make a GET request with \"Valley State\" query params",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Valley State\"",
+                  "offset": 26
+                }
+              ],
+              "location": "crisp.step_definitions.GetQueryStepDef.iMakeAGETRequestWithQueryParams(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 35,
+            "name": "I get response with status code 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 32
+                }
+              ],
+              "location": "crisp.step_definitions.GetQueryStepDef.iGetResponseWithStatusCode(int)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "error_message": "java.lang.AssertionError: 1 expectation failed.\nJSON path [0].Address doesn\u0027t match.\nExpected: is \"Valley State\"\n  Actual: null\n\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)\r\n\tat org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:72)\r\n\tat org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:59)\r\n\tat org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)\r\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)\r\n\tat io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:493)\r\n\tat io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)\r\n\tat io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:674)\r\n\tat jdk.internal.reflect.GeneratedMethodAccessor132.invoke(Unknown Source)\r\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:566)\r\n\tat org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:193)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:61)\r\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)\r\n\tat io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:261)\r\n\tat io.restassured.specification.ResponseSpecification$body$1.callCurrent(Unknown Source)\r\n\tat io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:108)\r\n\tat io.restassured.internal.ValidatableResponseOptionsImpl.body(ValidatableResponseOptionsImpl.java:244)\r\n\tat io.restassured.internal.ValidatableResponseImpl.super$2$body(ValidatableResponseImpl.groovy)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\r\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:566)\r\n\tat org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)\r\n\tat groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1268)\r\n\tat org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)\r\n\tat io.restassured.internal.ValidatableResponseImpl.body(ValidatableResponseImpl.groovy:298)\r\n\tat io.restassured.internal.ValidatableResponseImpl.body(ValidatableResponseImpl.groovy)\r\n\tat crisp.step_definitions.GetQueryStepDef.iShouldGetOnlyPatientsMatchingGiven(GetQueryStepDef.java:76)\r\n\tat ✽.I should get only patients matching given \"Valley State\"(file:///C:/Users/14436/IdeaProjects/Crisp/src/test/resources/features/GetQuery.feature:36)\r\n",
+              "duration": 17001900,
+              "status": "failed"
+            },
+            "line": 36,
+            "name": "I should get only patients matching given \"Valley State\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Valley State\"",
+                  "offset": 42
+                }
+              ],
+              "location": "crisp.step_definitions.GetQueryStepDef.iShouldGetOnlyPatientsMatchingGiven(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@queryEndpoint"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-10-15T22:40:18.633Z",
+        "line": 51,
+        "name": "Filter Patients By Name",
+        "description": "",
+        "id": "validate-query-api-endpoint-filtering-patients-data;filter-patients-by-name;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 341025800,
+              "status": "passed"
+            },
+            "line": 46,
+            "name": "I make a GET request with name query param \"Jenn D.\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Jenn D.\"",
+                  "offset": 43
+                }
+              ],
+              "location": "crisp.step_definitions.GetQueryStepDef.iMakeAGETRequestWithNameQueryParam(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 47,
+            "name": "I get response with status code 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 32
+                }
+              ],
+              "location": "crisp.step_definitions.GetQueryStepDef.iGetResponseWithStatusCode(int)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "error_message": "java.lang.AssertionError: 1 expectation failed.\nJSON path [0].Name doesn\u0027t match.\nExpected: is \"Jenn D.\"\n  Actual: null\n\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)\r\n\tat org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:72)\r\n\tat org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:59)\r\n\tat org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)\r\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)\r\n\tat io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:493)\r\n\tat io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)\r\n\tat io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:674)\r\n\tat jdk.internal.reflect.GeneratedMethodAccessor132.invoke(Unknown Source)\r\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:566)\r\n\tat org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:193)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:61)\r\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)\r\n\tat io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:261)\r\n\tat io.restassured.specification.ResponseSpecification$body$1.callCurrent(Unknown Source)\r\n\tat io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:108)\r\n\tat io.restassured.internal.ValidatableResponseOptionsImpl.body(ValidatableResponseOptionsImpl.java:244)\r\n\tat io.restassured.internal.ValidatableResponseImpl.super$2$body(ValidatableResponseImpl.groovy)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\r\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:566)\r\n\tat org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)\r\n\tat groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1268)\r\n\tat org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)\r\n\tat io.restassured.internal.ValidatableResponseImpl.body(ValidatableResponseImpl.groovy:298)\r\n\tat io.restassured.internal.ValidatableResponseImpl.body(ValidatableResponseImpl.groovy)\r\n\tat crisp.step_definitions.GetQueryStepDef.iShouldGetOnlyPatientsMatchingProvided(GetQueryStepDef.java:90)\r\n\tat ✽.I should get only patients matching provided \"Jenn D.\"(file:///C:/Users/14436/IdeaProjects/Crisp/src/test/resources/features/GetQuery.feature:48)\r\n",
+              "duration": 16000800,
+              "status": "failed"
+            },
+            "line": 48,
+            "name": "I should get only patients matching provided \"Jenn D.\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Jenn D.\"",
+                  "offset": 45
+                }
+              ],
+              "location": "crisp.step_definitions.GetQueryStepDef.iShouldGetOnlyPatientsMatchingProvided(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@queryEndpoint"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-10-15T22:40:19.002Z",
+        "line": 52,
+        "name": "Filter Patients By Name",
+        "description": "",
+        "id": "validate-query-api-endpoint-filtering-patients-data;filter-patients-by-name;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 357029300,
+              "status": "passed"
+            },
+            "line": 46,
+            "name": "I make a GET request with name query param \"Jack\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Jack\"",
+                  "offset": 43
+                }
+              ],
+              "location": "crisp.step_definitions.GetQueryStepDef.iMakeAGETRequestWithNameQueryParam(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 47,
+            "name": "I get response with status code 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 32
+                }
+              ],
+              "location": "crisp.step_definitions.GetQueryStepDef.iGetResponseWithStatusCode(int)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 17001300,
+              "status": "passed"
+            },
+            "line": 48,
+            "name": "I should get only patients matching provided \"Jack\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Jack\"",
+                  "offset": 45
+                }
+              ],
+              "location": "crisp.step_definitions.GetQueryStepDef.iShouldGetOnlyPatientsMatchingProvided(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@queryEndpoint"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-10-15T22:40:19.385Z",
+        "line": 53,
+        "name": "Filter Patients By Name",
+        "description": "",
+        "id": "validate-query-api-endpoint-filtering-patients-data;filter-patients-by-name;;4",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 368029300,
+              "status": "passed"
+            },
+            "line": 46,
+            "name": "I make a GET request with name query param \"Bernard\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Bernard\"",
+                  "offset": 43
+                }
+              ],
+              "location": "crisp.step_definitions.GetQueryStepDef.iMakeAGETRequestWithNameQueryParam(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 999900,
+              "status": "passed"
+            },
+            "line": 47,
+            "name": "I get response with status code 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 32
+                }
+              ],
+              "location": "crisp.step_definitions.GetQueryStepDef.iGetResponseWithStatusCode(int)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 20001200,
+              "status": "passed"
+            },
+            "line": 48,
+            "name": "I should get only patients matching provided \"Bernard\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Bernard\"",
+                  "offset": 45
+                }
+              ],
+              "location": "crisp.step_definitions.GetQueryStepDef.iShouldGetOnlyPatientsMatchingProvided(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@queryEndpoint"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-10-15T22:40:19.783Z",
+        "line": 54,
+        "name": "Filter Patients By Name",
+        "description": "",
+        "id": "validate-query-api-endpoint-filtering-patients-data;filter-patients-by-name;;5",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 342029000,
+              "status": "passed"
+            },
+            "line": 46,
+            "name": "I make a GET request with name query param \"Ross C.\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Ross C.\"",
+                  "offset": 43
+                }
+              ],
+              "location": "crisp.step_definitions.GetQueryStepDef.iMakeAGETRequestWithNameQueryParam(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 999500,
+              "status": "passed"
+            },
+            "line": 47,
+            "name": "I get response with status code 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 32
+                }
+              ],
+              "location": "crisp.step_definitions.GetQueryStepDef.iGetResponseWithStatusCode(int)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "error_message": "java.lang.AssertionError: 1 expectation failed.\nJSON path [0].Name doesn\u0027t match.\nExpected: is \"Ross C.\"\n  Actual: null\n\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)\r\n\tat org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:72)\r\n\tat org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:59)\r\n\tat org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)\r\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)\r\n\tat io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:493)\r\n\tat io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)\r\n\tat io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:674)\r\n\tat jdk.internal.reflect.GeneratedMethodAccessor132.invoke(Unknown Source)\r\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:566)\r\n\tat org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:193)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:61)\r\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)\r\n\tat io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:261)\r\n\tat io.restassured.specification.ResponseSpecification$body$1.callCurrent(Unknown Source)\r\n\tat io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:108)\r\n\tat io.restassured.internal.ValidatableResponseOptionsImpl.body(ValidatableResponseOptionsImpl.java:244)\r\n\tat io.restassured.internal.ValidatableResponseImpl.super$2$body(ValidatableResponseImpl.groovy)\r\n\tat jdk.internal.reflect.GeneratedMethodAccessor227.invoke(Unknown Source)\r\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:566)\r\n\tat org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)\r\n\tat groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1268)\r\n\tat org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)\r\n\tat io.restassured.internal.ValidatableResponseImpl.body(ValidatableResponseImpl.groovy:298)\r\n\tat io.restassured.internal.ValidatableResponseImpl.body(ValidatableResponseImpl.groovy)\r\n\tat crisp.step_definitions.GetQueryStepDef.iShouldGetOnlyPatientsMatchingProvided(GetQueryStepDef.java:90)\r\n\tat ✽.I should get only patients matching provided \"Ross C.\"(file:///C:/Users/14436/IdeaProjects/Crisp/src/test/resources/features/GetQuery.feature:48)\r\n",
+              "duration": 21002600,
+              "status": "failed"
+            },
+            "line": 48,
+            "name": "I should get only patients matching provided \"Ross C.\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Ross C.\"",
+                  "offset": 45
+                }
+              ],
+              "location": "crisp.step_definitions.GetQueryStepDef.iShouldGetOnlyPatientsMatchingProvided(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@queryEndpoint"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-10-15T22:40:20.159Z",
+        "line": 55,
+        "name": "Filter Patients By Name",
+        "description": "",
+        "id": "validate-query-api-endpoint-filtering-patients-data;filter-patients-by-name;;6",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 345025400,
+              "status": "passed"
+            },
+            "line": 46,
+            "name": "I make a GET request with name query param \"Slava\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Slava\"",
+                  "offset": 43
+                }
+              ],
+              "location": "crisp.step_definitions.GetQueryStepDef.iMakeAGETRequestWithNameQueryParam(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1001700,
+              "status": "passed"
+            },
+            "line": 47,
+            "name": "I get response with status code 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 32
+                }
+              ],
+              "location": "crisp.step_definitions.GetQueryStepDef.iGetResponseWithStatusCode(int)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "error_message": "java.lang.AssertionError: 1 expectation failed.\nJSON path [0].Name doesn\u0027t match.\nExpected: is \"Slava\"\n  Actual: null\n\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)\r\n\tat org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:72)\r\n\tat org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:59)\r\n\tat org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)\r\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)\r\n\tat io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:493)\r\n\tat io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)\r\n\tat io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:674)\r\n\tat jdk.internal.reflect.GeneratedMethodAccessor132.invoke(Unknown Source)\r\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:566)\r\n\tat org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:193)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:61)\r\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)\r\n\tat io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:261)\r\n\tat io.restassured.specification.ResponseSpecification$body$1.callCurrent(Unknown Source)\r\n\tat io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:108)\r\n\tat io.restassured.internal.ValidatableResponseOptionsImpl.body(ValidatableResponseOptionsImpl.java:244)\r\n\tat io.restassured.internal.ValidatableResponseImpl.super$2$body(ValidatableResponseImpl.groovy)\r\n\tat jdk.internal.reflect.GeneratedMethodAccessor227.invoke(Unknown Source)\r\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:566)\r\n\tat org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)\r\n\tat groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1268)\r\n\tat org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)\r\n\tat io.restassured.internal.ValidatableResponseImpl.body(ValidatableResponseImpl.groovy:298)\r\n\tat io.restassured.internal.ValidatableResponseImpl.body(ValidatableResponseImpl.groovy)\r\n\tat crisp.step_definitions.GetQueryStepDef.iShouldGetOnlyPatientsMatchingProvided(GetQueryStepDef.java:90)\r\n\tat ✽.I should get only patients matching provided \"Slava\"(file:///C:/Users/14436/IdeaProjects/Crisp/src/test/resources/features/GetQuery.feature:48)\r\n",
+              "duration": 13002300,
+              "status": "failed"
+            },
+            "line": 48,
+            "name": "I should get only patients matching provided \"Slava\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Slava\"",
+                  "offset": 45
+                }
+              ],
+              "location": "crisp.step_definitions.GetQueryStepDef.iShouldGetOnlyPatientsMatchingProvided(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@queryEndpoint"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-10-15T22:40:20.527Z",
+        "line": 64,
+        "name": "Filter Patients Using All Data",
+        "description": "",
+        "id": "validate-query-api-endpoint-filtering-patients-data;filter-patients-using-all-data;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 409032200,
+              "status": "passed"
+            },
+            "line": 59,
+            "name": "I make a request with \"111\", \"Jenn D\", \"1934-06-01\" and \"CA\" query parameters",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"111\"",
+                  "offset": 22
+                },
+                {
+                  "val": "\"Jenn D\"",
+                  "offset": 29
+                },
+                {
+                  "val": "\"1934-06-01\"",
+                  "offset": 39
+                },
+                {
+                  "val": "\"CA\"",
+                  "offset": 56
+                }
+              ],
+              "location": "crisp.step_definitions.GetQueryStepDef.iMakeARequestWithAndQueryParameters(java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 60,
+            "name": "I get response with status code 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 32
+                }
+              ],
+              "location": "crisp.step_definitions.GetQueryStepDef.iGetResponseWithStatusCode(int)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "error_message": "groovy.json.JsonException: Lexing failed on line: 1, column: 1, while reading \u0027O\u0027, no possible valid JSON value or punctuation could be recognized.\r\n\tat groovy.json.JsonLexer.nextToken(JsonLexer.java:86)\r\n\tat groovy.json.JsonLexer$nextToken.call(Unknown Source)\r\n\tat io.restassured.internal.path.json.ConfigurableJsonSlurper.parse(ConfigurableJsonSlurper.groovy:97)\r\n\tat io.restassured.internal.path.json.ConfigurableJsonSlurper$parse$0.callCurrent(Unknown Source)\r\n\tat io.restassured.internal.path.json.ConfigurableJsonSlurper.parseText(ConfigurableJsonSlurper.groovy:83)\r\n\tat io.restassured.internal.path.json.ConfigurableJsonSlurper$parseText.call(Unknown Source)\r\n\tat io.restassured.internal.ContentParser.parse(ContentParser.groovy:42)\r\n\tat io.restassured.internal.ContentParser$parse.call(Unknown Source)\r\n\tat io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:478)\r\n\tat io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)\r\n\tat io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:674)\r\n\tat jdk.internal.reflect.GeneratedMethodAccessor132.invoke(Unknown Source)\r\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:566)\r\n\tat org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:193)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:61)\r\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)\r\n\tat io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:261)\r\n\tat io.restassured.specification.ResponseSpecification$body$1.callCurrent(Unknown Source)\r\n\tat io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:108)\r\n\tat io.restassured.internal.ValidatableResponseOptionsImpl.body(ValidatableResponseOptionsImpl.java:244)\r\n\tat io.restassured.internal.ValidatableResponseImpl.super$2$body(ValidatableResponseImpl.groovy)\r\n\tat jdk.internal.reflect.GeneratedMethodAccessor227.invoke(Unknown Source)\r\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:566)\r\n\tat org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)\r\n\tat groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1268)\r\n\tat org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)\r\n\tat io.restassured.internal.ValidatableResponseImpl.body(ValidatableResponseImpl.groovy:298)\r\n\tat io.restassured.internal.ValidatableResponseImpl.body(ValidatableResponseImpl.groovy)\r\n\tat crisp.step_definitions.GetQueryStepDef.iShouldGetOnlyOnePatientMatchingAnd(GetQueryStepDef.java:107)\r\n\tat ✽.I should get only one patient matching \"111\", \"Jenn D\", \"1934-06-01\" and \"CA\"(file:///C:/Users/14436/IdeaProjects/Crisp/src/test/resources/features/GetQuery.feature:61)\r\n",
+              "duration": 2002000,
+              "status": "failed"
+            },
+            "line": 61,
+            "name": "I should get only one patient matching \"111\", \"Jenn D\", \"1934-06-01\" and \"CA\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"111\"",
+                  "offset": 39
+                },
+                {
+                  "val": "\"Jenn D\"",
+                  "offset": 46
+                },
+                {
+                  "val": "\"1934-06-01\"",
+                  "offset": 56
+                },
+                {
+                  "val": "\"CA\"",
+                  "offset": 73
+                }
+              ],
+              "location": "crisp.step_definitions.GetQueryStepDef.iShouldGetOnlyOnePatientMatchingAnd(java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@queryEndpoint"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-10-15T22:40:20.944Z",
+        "line": 65,
+        "name": "Filter Patients Using All Data",
+        "description": "",
+        "id": "validate-query-api-endpoint-filtering-patients-data;filter-patients-using-all-data;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 363028900,
+              "status": "passed"
+            },
+            "line": 59,
+            "name": "I make a request with \"222\", \"Jack\", \"1956-05-01\" and \"MD\" query parameters",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"222\"",
+                  "offset": 22
+                },
+                {
+                  "val": "\"Jack\"",
+                  "offset": 29
+                },
+                {
+                  "val": "\"1956-05-01\"",
+                  "offset": 37
+                },
+                {
+                  "val": "\"MD\"",
+                  "offset": 54
+                }
+              ],
+              "location": "crisp.step_definitions.GetQueryStepDef.iMakeARequestWithAndQueryParameters(java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 60,
+            "name": "I get response with status code 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 32
+                }
+              ],
+              "location": "crisp.step_definitions.GetQueryStepDef.iGetResponseWithStatusCode(int)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "error_message": "groovy.json.JsonException: Lexing failed on line: 1, column: 1, while reading \u0027O\u0027, no possible valid JSON value or punctuation could be recognized.\r\n\tat groovy.json.JsonLexer.nextToken(JsonLexer.java:86)\r\n\tat groovy.json.JsonLexer$nextToken.call(Unknown Source)\r\n\tat io.restassured.internal.path.json.ConfigurableJsonSlurper.parse(ConfigurableJsonSlurper.groovy:97)\r\n\tat io.restassured.internal.path.json.ConfigurableJsonSlurper$parse$0.callCurrent(Unknown Source)\r\n\tat io.restassured.internal.path.json.ConfigurableJsonSlurper.parseText(ConfigurableJsonSlurper.groovy:83)\r\n\tat io.restassured.internal.path.json.ConfigurableJsonSlurper$parseText.call(Unknown Source)\r\n\tat io.restassured.internal.ContentParser.parse(ContentParser.groovy:42)\r\n\tat io.restassured.internal.ContentParser$parse.call(Unknown Source)\r\n\tat io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:478)\r\n\tat io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)\r\n\tat io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:674)\r\n\tat jdk.internal.reflect.GeneratedMethodAccessor132.invoke(Unknown Source)\r\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:566)\r\n\tat org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:193)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:61)\r\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)\r\n\tat io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:261)\r\n\tat io.restassured.specification.ResponseSpecification$body$1.callCurrent(Unknown Source)\r\n\tat io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:108)\r\n\tat io.restassured.internal.ValidatableResponseOptionsImpl.body(ValidatableResponseOptionsImpl.java:244)\r\n\tat io.restassured.internal.ValidatableResponseImpl.super$2$body(ValidatableResponseImpl.groovy)\r\n\tat jdk.internal.reflect.GeneratedMethodAccessor227.invoke(Unknown Source)\r\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:566)\r\n\tat org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)\r\n\tat groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1268)\r\n\tat org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)\r\n\tat io.restassured.internal.ValidatableResponseImpl.body(ValidatableResponseImpl.groovy:298)\r\n\tat io.restassured.internal.ValidatableResponseImpl.body(ValidatableResponseImpl.groovy)\r\n\tat crisp.step_definitions.GetQueryStepDef.iShouldGetOnlyOnePatientMatchingAnd(GetQueryStepDef.java:107)\r\n\tat ✽.I should get only one patient matching \"222\", \"Jack\", \"1956-05-01\" and \"MD\"(file:///C:/Users/14436/IdeaProjects/Crisp/src/test/resources/features/GetQuery.feature:61)\r\n",
+              "duration": 999800,
+              "status": "failed"
+            },
+            "line": 61,
+            "name": "I should get only one patient matching \"222\", \"Jack\", \"1956-05-01\" and \"MD\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"222\"",
+                  "offset": 39
+                },
+                {
+                  "val": "\"Jack\"",
+                  "offset": 46
+                },
+                {
+                  "val": "\"1956-05-01\"",
+                  "offset": 54
+                },
+                {
+                  "val": "\"MD\"",
+                  "offset": 71
+                }
+              ],
+              "location": "crisp.step_definitions.GetQueryStepDef.iShouldGetOnlyOnePatientMatchingAnd(java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@queryEndpoint"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-10-15T22:40:21.316Z",
+        "line": 66,
+        "name": "Filter Patients Using All Data",
+        "description": "",
+        "id": "validate-query-api-endpoint-filtering-patients-data;filter-patients-using-all-data;;4",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 349028000,
+              "status": "passed"
+            },
+            "line": 59,
+            "name": "I make a request with \"333\", \"Bernard\", \"1966-04-01\" and \"CA State\" query parameters",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"333\"",
+                  "offset": 22
+                },
+                {
+                  "val": "\"Bernard\"",
+                  "offset": 29
+                },
+                {
+                  "val": "\"1966-04-01\"",
+                  "offset": 40
+                },
+                {
+                  "val": "\"CA State\"",
+                  "offset": 57
+                }
+              ],
+              "location": "crisp.step_definitions.GetQueryStepDef.iMakeARequestWithAndQueryParameters(java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1000500,
+              "status": "passed"
+            },
+            "line": 60,
+            "name": "I get response with status code 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 32
+                }
+              ],
+              "location": "crisp.step_definitions.GetQueryStepDef.iGetResponseWithStatusCode(int)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "error_message": "groovy.json.JsonException: Lexing failed on line: 1, column: 1, while reading \u0027O\u0027, no possible valid JSON value or punctuation could be recognized.\r\n\tat groovy.json.JsonLexer.nextToken(JsonLexer.java:86)\r\n\tat groovy.json.JsonLexer$nextToken.call(Unknown Source)\r\n\tat io.restassured.internal.path.json.ConfigurableJsonSlurper.parse(ConfigurableJsonSlurper.groovy:97)\r\n\tat io.restassured.internal.path.json.ConfigurableJsonSlurper$parse$0.callCurrent(Unknown Source)\r\n\tat io.restassured.internal.path.json.ConfigurableJsonSlurper.parseText(ConfigurableJsonSlurper.groovy:83)\r\n\tat io.restassured.internal.path.json.ConfigurableJsonSlurper$parseText.call(Unknown Source)\r\n\tat io.restassured.internal.ContentParser.parse(ContentParser.groovy:42)\r\n\tat io.restassured.internal.ContentParser$parse.call(Unknown Source)\r\n\tat io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:478)\r\n\tat io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)\r\n\tat io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:674)\r\n\tat jdk.internal.reflect.GeneratedMethodAccessor132.invoke(Unknown Source)\r\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:566)\r\n\tat org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:193)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:61)\r\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)\r\n\tat io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:261)\r\n\tat io.restassured.specification.ResponseSpecification$body$1.callCurrent(Unknown Source)\r\n\tat io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:108)\r\n\tat io.restassured.internal.ValidatableResponseOptionsImpl.body(ValidatableResponseOptionsImpl.java:244)\r\n\tat io.restassured.internal.ValidatableResponseImpl.super$2$body(ValidatableResponseImpl.groovy)\r\n\tat jdk.internal.reflect.GeneratedMethodAccessor227.invoke(Unknown Source)\r\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:566)\r\n\tat org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)\r\n\tat groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1268)\r\n\tat org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)\r\n\tat io.restassured.internal.ValidatableResponseImpl.body(ValidatableResponseImpl.groovy:298)\r\n\tat io.restassured.internal.ValidatableResponseImpl.body(ValidatableResponseImpl.groovy)\r\n\tat crisp.step_definitions.GetQueryStepDef.iShouldGetOnlyOnePatientMatchingAnd(GetQueryStepDef.java:107)\r\n\tat ✽.I should get only one patient matching \"333\", \"Bernard\", \"1966-04-01\" and \"CA State\"(file:///C:/Users/14436/IdeaProjects/Crisp/src/test/resources/features/GetQuery.feature:61)\r\n",
+              "duration": 1000100,
+              "status": "failed"
+            },
+            "line": 61,
+            "name": "I should get only one patient matching \"333\", \"Bernard\", \"1966-04-01\" and \"CA State\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"333\"",
+                  "offset": 39
+                },
+                {
+                  "val": "\"Bernard\"",
+                  "offset": 46
+                },
+                {
+                  "val": "\"1966-04-01\"",
+                  "offset": 57
+                },
+                {
+                  "val": "\"CA State\"",
+                  "offset": 74
+                }
+              ],
+              "location": "crisp.step_definitions.GetQueryStepDef.iShouldGetOnlyOnePatientMatchingAnd(java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@queryEndpoint"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-10-15T22:40:21.674Z",
+        "line": 67,
+        "name": "Filter Patients Using All Data",
+        "description": "",
+        "id": "validate-query-api-endpoint-filtering-patients-data;filter-patients-using-all-data;;5",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 408030400,
+              "status": "passed"
+            },
+            "line": 59,
+            "name": "I make a request with \"444\", \"Ross C.\", \"2000-03-01\" and \"Valley State\" query parameters",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"444\"",
+                  "offset": 22
+                },
+                {
+                  "val": "\"Ross C.\"",
+                  "offset": 29
+                },
+                {
+                  "val": "\"2000-03-01\"",
+                  "offset": 40
+                },
+                {
+                  "val": "\"Valley State\"",
+                  "offset": 57
+                }
+              ],
+              "location": "crisp.step_definitions.GetQueryStepDef.iMakeARequestWithAndQueryParameters(java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 60,
+            "name": "I get response with status code 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 32
+                }
+              ],
+              "location": "crisp.step_definitions.GetQueryStepDef.iGetResponseWithStatusCode(int)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "error_message": "groovy.json.JsonException: Lexing failed on line: 1, column: 1, while reading \u0027O\u0027, no possible valid JSON value or punctuation could be recognized.\r\n\tat groovy.json.JsonLexer.nextToken(JsonLexer.java:86)\r\n\tat groovy.json.JsonLexer$nextToken.call(Unknown Source)\r\n\tat io.restassured.internal.path.json.ConfigurableJsonSlurper.parse(ConfigurableJsonSlurper.groovy:97)\r\n\tat io.restassured.internal.path.json.ConfigurableJsonSlurper$parse$0.callCurrent(Unknown Source)\r\n\tat io.restassured.internal.path.json.ConfigurableJsonSlurper.parseText(ConfigurableJsonSlurper.groovy:83)\r\n\tat io.restassured.internal.path.json.ConfigurableJsonSlurper$parseText.call(Unknown Source)\r\n\tat io.restassured.internal.ContentParser.parse(ContentParser.groovy:42)\r\n\tat io.restassured.internal.ContentParser$parse.call(Unknown Source)\r\n\tat io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:478)\r\n\tat io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)\r\n\tat io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:674)\r\n\tat jdk.internal.reflect.GeneratedMethodAccessor132.invoke(Unknown Source)\r\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:566)\r\n\tat org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:193)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:61)\r\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)\r\n\tat io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:261)\r\n\tat io.restassured.specification.ResponseSpecification$body$1.callCurrent(Unknown Source)\r\n\tat io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:108)\r\n\tat io.restassured.internal.ValidatableResponseOptionsImpl.body(ValidatableResponseOptionsImpl.java:244)\r\n\tat io.restassured.internal.ValidatableResponseImpl.super$2$body(ValidatableResponseImpl.groovy)\r\n\tat jdk.internal.reflect.GeneratedMethodAccessor227.invoke(Unknown Source)\r\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:566)\r\n\tat org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)\r\n\tat groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1268)\r\n\tat org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)\r\n\tat io.restassured.internal.ValidatableResponseImpl.body(ValidatableResponseImpl.groovy:298)\r\n\tat io.restassured.internal.ValidatableResponseImpl.body(ValidatableResponseImpl.groovy)\r\n\tat crisp.step_definitions.GetQueryStepDef.iShouldGetOnlyOnePatientMatchingAnd(GetQueryStepDef.java:107)\r\n\tat ✽.I should get only one patient matching \"444\", \"Ross C.\", \"2000-03-01\" and \"Valley State\"(file:///C:/Users/14436/IdeaProjects/Crisp/src/test/resources/features/GetQuery.feature:61)\r\n",
+              "duration": 1999600,
+              "status": "failed"
+            },
+            "line": 61,
+            "name": "I should get only one patient matching \"444\", \"Ross C.\", \"2000-03-01\" and \"Valley State\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"444\"",
+                  "offset": 39
+                },
+                {
+                  "val": "\"Ross C.\"",
+                  "offset": 46
+                },
+                {
+                  "val": "\"2000-03-01\"",
+                  "offset": 57
+                },
+                {
+                  "val": "\"Valley State\"",
+                  "offset": 74
+                }
+              ],
+              "location": "crisp.step_definitions.GetQueryStepDef.iShouldGetOnlyOnePatientMatchingAnd(java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@queryEndpoint"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-10-15T22:40:22.092Z",
+        "line": 70,
+        "name": "Validate Endpoint Does Not Accepts POST Method",
+        "description": "",
+        "id": "validate-query-api-endpoint-filtering-patients-data;validate-endpoint-does-not-accepts-post-method",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 385029800,
+              "status": "passed"
+            },
+            "line": 71,
+            "name": "I make a POST request",
+            "match": {
+              "location": "crisp.step_definitions.GetQueryStepDef.iMakeAPOSTRequest()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 20002400,
+              "status": "passed"
+            },
+            "line": 72,
+            "name": "I get response with status code 404 and message \"Resource not found\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "404",
+                  "offset": 32
+                },
+                {
+                  "val": "\"Resource not found\"",
+                  "offset": 48
+                }
+              ],
+              "location": "crisp.step_definitions.GetQueryStepDef.iGetResponseWithStatusCodeAndMessage(int,java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@queryEndpoint"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-10-15T22:40:22.502Z",
+        "line": 74,
+        "name": "Validate Endpoint Does Not Accepts PUT Method",
+        "description": "",
+        "id": "validate-query-api-endpoint-filtering-patients-data;validate-endpoint-does-not-accepts-put-method",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 354024800,
+              "status": "passed"
+            },
+            "line": 75,
+            "name": "I make a PUT request",
+            "match": {
+              "location": "crisp.step_definitions.GetQueryStepDef.iMakeAPUTRequest()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 12000100,
+              "status": "passed"
+            },
+            "line": 76,
+            "name": "I get response with status code 404 and message \"Resource not found\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "404",
+                  "offset": 32
+                },
+                {
+                  "val": "\"Resource not found\"",
+                  "offset": 48
+                }
+              ],
+              "location": "crisp.step_definitions.GetQueryStepDef.iGetResponseWithStatusCodeAndMessage(int,java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@queryEndpoint"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-10-15T22:40:22.872Z",
+        "line": 78,
+        "name": "Validate Endpoint Does Not Accepts PATCH Method",
+        "description": "",
+        "id": "validate-query-api-endpoint-filtering-patients-data;validate-endpoint-does-not-accepts-patch-method",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 354024800,
+              "status": "passed"
+            },
+            "line": 79,
+            "name": "I make a PATCH request",
+            "match": {
+              "location": "crisp.step_definitions.GetQueryStepDef.iMakeAPATCHRequest()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 12000300,
+              "status": "passed"
+            },
+            "line": 80,
+            "name": "I get response with status code 404 and message \"Resource not found\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "404",
+                  "offset": 32
+                },
+                {
+                  "val": "\"Resource not found\"",
+                  "offset": 48
+                }
+              ],
+              "location": "crisp.step_definitions.GetQueryStepDef.iGetResponseWithStatusCodeAndMessage(int,java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@queryEndpoint"
+          }
+        ]
+      }
+    ],
+    "name": "Validate Query API Endpoint Filtering Patients Data",
+    "description": "",
+    "id": "validate-query-api-endpoint-filtering-patients-data",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/GetQuery.feature",
+    "tags": [
+      {
+        "name": "@queryEndpoint",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]
