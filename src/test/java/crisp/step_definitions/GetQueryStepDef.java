@@ -6,9 +6,6 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.restassured.response.Response;
 import org.hamcrest.Matchers;
-
-import java.util.List;
-
 import static io.restassured.RestAssured.given;
 
 public class GetQueryStepDef {
@@ -19,7 +16,7 @@ public class GetQueryStepDef {
     @Given("I make a GET request to query endpoint")
     public void iMakeAGETRequestToQueryEndpoint() {
         response = given()
-                .get(uri);
+                .get();
     }
 
     @When("I get response with status code {int}")
@@ -38,7 +35,7 @@ public class GetQueryStepDef {
     public void iMakeAGETRequestWithQueryParameter(String id) {
         response = given()
                 .queryParam("Id", id)
-                .get(uri);
+                .get();
     }
 
     @Then("I should get only one patient in response body matching given {string}")
@@ -53,7 +50,7 @@ public class GetQueryStepDef {
     public void iMakeAGETRequestWithQueryParam(String dateOfBirth) {
         response = given()
                 .queryParam("DateOfBirth", dateOfBirth)
-                .get(uri);
+                .get();
 
     }
 
@@ -67,7 +64,7 @@ public class GetQueryStepDef {
     public void iMakeAGETRequestWithQueryParams(String address) {
         response = given()
                 .queryParam("Address", address)
-                .get(uri);
+                .get();
     }
 
     @Then("I should get only patients matching given {string}")
@@ -80,7 +77,7 @@ public class GetQueryStepDef {
     public void iMakeAGETRequestWithNameQueryParam(String name) {
         response = given()
                 .queryParam("Name", name)
-                .get(uri);
+                .get();
     }
 
 
@@ -95,9 +92,7 @@ public class GetQueryStepDef {
     public void iMakeARequestWithAndQueryParameters(String id, String name, String dob, String address) {
         response = given()
                 .queryParams("Id", id, "Name", name, "DateOfBirth", dob, "Address", address)
-                .log().all()
-                .get(uri);
-        response.prettyPrint();
+                .get();
     }
 
 
@@ -113,7 +108,7 @@ public class GetQueryStepDef {
     @Given("I make a POST request")
     public void iMakeAPOSTRequest() {
         response = given()
-                .post(uri);
+                .post();
     }
 
     @Then("I get response with status code {int} and message {string}")
@@ -128,12 +123,12 @@ public class GetQueryStepDef {
     @Given("I make a PUT request")
     public void iMakeAPUTRequest() {
         response = given()
-                .put(uri);
+                .put();
     }
 
     @Given("I make a PATCH request")
     public void iMakeAPATCHRequest() {
         response = given()
-                .patch(uri);
+                .patch();
     }
 }
